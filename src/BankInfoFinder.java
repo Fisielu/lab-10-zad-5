@@ -7,7 +7,6 @@ public class BankInfoFinder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-
         System.out.print("Podaj trzy pierwsze cyfry numeru konta: ");
         String bankCode = scanner.nextLine();
 
@@ -16,12 +15,10 @@ public class BankInfoFinder {
             return;
         }
 
-
         String fileUrl = "https://ewib.nbp.pl/plewibnra?dokNazwa=plewibnra.txt";
         String tempFileName = "bank_data.txt";
 
         try {
-
             downloadFile(fileUrl, tempFileName);
 
             findBankInfo(tempFileName, bankCode);
